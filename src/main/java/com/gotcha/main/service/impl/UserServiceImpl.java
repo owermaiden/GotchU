@@ -24,6 +24,7 @@ public class UserServiceImpl implements UserService {
     @Override
     @Cacheable(value = "users")
     public List<User> getAll() {
+        System.out.println("called");
         return repository.findAll();
     }
 }
